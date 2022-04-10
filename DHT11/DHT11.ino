@@ -622,12 +622,9 @@ void OnMsg(const std::string& msg){
     }
 }
 
-// --------------------------lmw的工作-------------------------------------- //
-
 void DealSendData(){
     float tempe = 0.0f, humid = 0.0f;
 
-    // TODO:获取温度值赋给tempe, 湿度值赋给moder
     DHT11.read(DHT11PIN);
     tempe = DHT11.temperature;
     humid = DHT11.humidity;

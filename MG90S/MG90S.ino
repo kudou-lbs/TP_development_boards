@@ -530,8 +530,8 @@ WiFiClient espClient;
 PubSubClient client(espClient);
 
 // WiFi
-const char *ssid = "WiFi name"; // Enter your WiFi name
-const char *password = "WiFi password";  // Enter WiFi password
+const char *ssid = "Sonce"; // Enter your WiFi name
+const char *password = "lmw786603";  // Enter WiFi password
 
 void setup() {
     // Set software serial baud to 115200;
@@ -699,7 +699,7 @@ void ReduceGear(){
 void PowerOn(){
   Serial.println("Power on");
   MG90S.write(180);
-  delay(300);
+  delay(400);
   MG90S.write(90);
   delay(100);
 }
@@ -707,7 +707,7 @@ void PowerOn(){
 void PowerOff(){
   Serial.println("Power off");
   MG90S.write(0);
-  delay(300);
+  delay(400);
   MG90S.write(90);
   delay(100);
 }

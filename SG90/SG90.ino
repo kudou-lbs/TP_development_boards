@@ -633,16 +633,11 @@ void OnMsg(const std::string& msg){
     }
 }
 
-// --------------------------lmw的工作-------------------------------------- //
-
 void GetLightState(){
     bool light_state = false;
-
-    // TODO:获取当前灯开/关状态，将true/false赋给light_state
     if(SG90.read()==180){
       light_state = true;
     }
-
     Serial.print("当前灯:");
     if(light_state) Serial.println("开");
     else Serial.println("关");
@@ -654,14 +649,12 @@ void GetLightState(){
 }
 
 void DealOpenLight(){
-    // TODO:开灯操作
     Serial.println(SG90.attached());
     SG90.write(180);
     delay(3000);
 }
 
 void DealCloseLight(){
-    // TODO:关灯操作
     Serial.println(SG90.attached());
     SG90.write(90);
     delay(3000);
