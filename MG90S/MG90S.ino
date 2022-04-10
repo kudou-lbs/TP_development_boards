@@ -630,14 +630,9 @@ void OnMsg(const std::string& msg){
     }
 }
 
-// --------------------------lmw的工作-------------------------------------- //
-
 void GetFanState(){
     int fan_gear = 0;
-
-    // TODO:获取风扇当前档位，将档位给FanGear
     fan_gear = gear;
-
     Serial.print("当前风扇角度:");
     Serial.print(fan_gear);
     Serial.println("%");
